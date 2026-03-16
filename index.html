@@ -16,15 +16,15 @@
   .live-badge { background: #fee2e2; color: var(--red); font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 20px; display: flex; align-items: center; gap: 4px; }
   .live-dot { width: 6px; height: 6px; background: var(--red); border-radius: 50%; animation: pulse 1.5s infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-  main { max-width: 1400px; margin: 0 auto; padding: 20px; }
+  main { max-width: 1600px; margin: 0 auto; padding: 20px; }
   .note { background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 10px 16px; font-size: 12px; color: #92400e; margin-bottom: 20px; }
-  .cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 28px; }
+  .cards { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; margin-bottom: 28px; }
   .tv-card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
   .chart-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 10px; margin-top: 28px; display: flex; align-items: center; gap: 8px; }
   .chart-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
   .chart-wrapper { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 8px; }
   footer { text-align: center; padding: 24px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 32px; }
-  @media (max-width: 900px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 1200px) { .cards { grid-template-columns: repeat(4, 1fr); } }
   @media (max-width: 600px) { .cards { grid-template-columns: repeat(2, 1fr); } header { flex-wrap: wrap; } }
 </style>
 </head>
@@ -39,6 +39,7 @@
 <main>
   <div class="note">⚠️ 데이터는 TradingView 기준이며 지연될 수 있습니다. 투자 판단의 참고자료로만 활용해 주세요.</div>
 
+  <!-- 카드 8개 한 줄 -->
   <div class="cards">
     <div class="tv-card">
       <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
@@ -50,22 +51,31 @@
     </div>
     <div class="tv-card">
       <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"OANDA:USDCAD","width":"100%","colorTheme":"light","isTransparent":false,"locale":"kr"}</script></div>
-    </div>
-    <div class="tv-card">
-      <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"OANDA:XAUUSD","width":"100%","colorTheme":"light","isTransparent":false,"locale":"kr"}</script></div>
     </div>
     <div class="tv-card">
       <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"OANDA:WTICOUSD","width":"100%","colorTheme":"light","isTransparent":false,"locale":"kr"}</script></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"OANDA:XAGUSD","width":"100%","colorTheme":"light","isTransparent":false,"locale":"kr"}</script></div>
     </div>
     <div class="tv-card">
       <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"COINBASE:BTCUSD","width":"100%","colorTheme":"light","isTransparent":false,"locale":"kr"}</script></div>
     </div>
+    <div class="tv-card">
+      <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"COINBASE:ETHUSD","width":"100%","colorTheme":"light","isTransparent":false,"locale":"kr"}</script></div>
+    </div>
+    <div class="tv-card">
+      <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"OANDA:USDCAD","width":"100%","colorTheme":"light","isTransparent":false,"locale":"kr"}</script></div>
+    </div>
+    <div class="tv-card">
+      <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FX:USDKRW","width":"100%","colorTheme":"light","isTransparent":false,"locale":"kr"}</script></div>
+    </div>
   </div>
 
+  <!-- 차트 -->
   <div class="chart-title">📈 S&P 500 차트</div>
   <div class="chart-wrapper">
     <div class="tradingview-widget-container" style="height:420px;">
